@@ -1,5 +1,5 @@
-# Web-Multi-Scan
-**running multiple scanning tools to discover vulnerabilities, effectively judge false-positives, collectively correlate results** and **saves precious time**
+
+
 #  _The Multi-Tool Web Vulnerability Scanner_
 Download and use it if you still haven't upgraded to Python 3. Kindly note that the v1.1 (Python2.7) will not be enhanced further._
 
@@ -22,3 +22,67 @@ Download and use it if you still haven't upgraded to Python 3. Kindly note that 
 - **artificial intelligence** to deploy tools automatically depending upon the issues found. for eg; automates the launch of `wpscan` and `plecost` tools when a wordpress installation is found. (_**under development**_)
 - **detailed comprehensive report** in a portable document format (*.pdf) with complete details of the scans and tools used. (_**under development**_)
 - **on the run metasploit auxilliary modules** to discover more vulnerabilities. (_**under development**_)
+
+---
+### FYI:
+- _program is still under development, **works** and currently supports **80** vulnerability tests._
+- _parallel processing is not yet implemented, may be coded as more tests gets introduced._
+
+## Vulnerability Checks
+- :heavy_check_mark: DNS/HTTP Load Balancers & Web Application Firewalls.
+- :heavy_check_mark: Checks for Joomla, WordPress and Drupal
+- :heavy_check_mark: SSL related Vulnerabilities (_HEARTBLEED, FREAK, POODLE, CCS Injection, LOGJAM, OCSP Stapling_).
+- :heavy_check_mark: Commonly Opened Ports.
+- :heavy_check_mark: DNS Zone Transfers using multiple tools (_Fierce, DNSWalk, DNSRecon, DNSEnum_).
+- :heavy_check_mark: Sub-Domains Brute Forcing (_DNSMap, amass, nikto_)
+- :heavy_check_mark: Open Directory/File Brute Forcing.
+- :heavy_check_mark: Shallow XSS, SQLi and BSQLi Banners.
+- :heavy_check_mark: Slow-Loris DoS Attack, LFI (_Local File Inclusion_), RFI (_Remote File Inclusion_) & RCE (_Remote Code Execution_).
+- & more coming up...
+
+## Requirements
+- **Python 3**
+- Kali OS (_**Preferred**, as it is shipped with almost all the tools_)
+- Tested with Parrot & Ubuntu Operating Systems.
+
+## Usage 
+`apt-key update && apt-get update`
+ `apt-get install whois --force-yes`
+ `python3 ssc.py example.com`
+
+------------------------------------------------------------------------------------------------------
+RUN apt-get -yq install \
+      python3 \
+      host \
+      whois \
+      sslyze \
+      wapiti \
+      nmap \
+      dmitry \
+      dnsenum \
+      dnsmap \
+      dnsrecon \
+      dnswalk \
+      dirb \
+      wafw00f \
+      whatweb \
+      nikto \
+      lbd \
+      xsser \
+      fierce \
+      theharvester \
+      davtest \
+      uniscan \
+      amass \
+      wget && \
+
+## Installation
+
+
+```
+git clone https://github.com/skavngr/rapidscan.git /opt/
+cd /opt/rapidscan
+python3 -m pip install .
+```
+
+
